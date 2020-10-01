@@ -78,7 +78,7 @@ public class UserInfoActivity extends Activity {
                if (value.equals("M")) {
                    ((RadioButton) findViewById(R.id.ButtonMale)).setChecked(true);
                } else if (value.equals("F")) {
-                   ((RadioButton) findViewById(R.id.ButtonFemale)).setChecked(true);
+                   (findViewById(R.id.ButtonFemale)).setChecked(true);
                }
         	   RadioGroup rbg = (RadioGroup) findViewById(R.id.RadioGroupGender);
                if (rbg.getCheckedRadioButtonId() == R.id.ButtonMale) ((RadioButton) findViewById(R.id.ButtonMale)).setChecked(true);
@@ -230,7 +230,7 @@ public class UserInfoActivity extends Activity {
         editor.putString(""+PREF_CYCLEFREQ,""+((SeekBar)findViewById(R.id.SeekCycleFreq)).getProgress());*/
 
         //Save Gender
-        RadioGroup rbg = (RadioGroup) findViewById(R.id.RadioGroupGender);
+        RadioGroup rbg =  findViewById(R.id.RadioGroupGender);
         if (rbg.getCheckedRadioButtonId() == R.id.ButtonMale) editor.putString(""+PREF_GENDER,"M");
         if (rbg.getCheckedRadioButtonId() == R.id.ButtonFemale) editor.putString(""+PREF_GENDER,"F");
         //Gender is needed!
@@ -240,7 +240,7 @@ public class UserInfoActivity extends Activity {
 		}
 
         //Save Age
-        RadioGroup chg = (RadioGroup) findViewById(R.id.RadioGroupAge);
+        RadioGroup chg =  findViewById(R.id.RadioGroupAge);
         if (chg.getCheckedRadioButtonId() == R.id.RadioButtonAge){
         	editor.putString(""+PREF_AGE,"0-4");
         	//driver license is 0 (as this radio button will be disabled)
@@ -262,14 +262,14 @@ public class UserInfoActivity extends Activity {
 		}
 
         //Save Employment Status
-        CheckBox chk1 = (CheckBox) findViewById(R.id.CheckBoxES1);
-        CheckBox chk2 = (CheckBox) findViewById(R.id.CheckBoxES2);
-        CheckBox chk3 = (CheckBox) findViewById(R.id.CheckBoxES3);
-        CheckBox chk4 = (CheckBox) findViewById(R.id.CheckBoxES4);
-        CheckBox chk5 = (CheckBox) findViewById(R.id.CheckBoxES5);
-        CheckBox chk6 = (CheckBox) findViewById(R.id.CheckBoxES6);
-        CheckBox chk7 = (CheckBox) findViewById(R.id.CheckBoxES7);
-        CheckBox chk8 = (CheckBox) findViewById(R.id.CheckBoxES8);
+        CheckBox chk1 =  findViewById(R.id.CheckBoxES1);
+        CheckBox chk2 =  findViewById(R.id.CheckBoxES2);
+        CheckBox chk3 =  findViewById(R.id.CheckBoxES3);
+        CheckBox chk4 =  findViewById(R.id.CheckBoxES4);
+        CheckBox chk5 =  findViewById(R.id.CheckBoxES5);
+        CheckBox chk6 =  findViewById(R.id.CheckBoxES6);
+        CheckBox chk7 =  findViewById(R.id.CheckBoxES7);
+        CheckBox chk8 =  findViewById(R.id.CheckBoxES8);
 
         if (chk1.isChecked()) {editor.putInt(""+PREF_EMPLOYMENTSTATUS1, 1);} else {editor.putInt(""+PREF_EMPLOYMENTSTATUS1, 0);}
         if (chk2.isChecked()) {editor.putInt(""+PREF_EMPLOYMENTSTATUS2, 1);} else {editor.putInt(""+PREF_EMPLOYMENTSTATUS2, 0);}
@@ -390,35 +390,35 @@ public class UserInfoActivity extends Activity {
         RadioButton yesButton = (RadioButton) findViewById(R.id.ButtonSYes);
         noButton.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v) {
-            	((RadioButton) findViewById(R.id.RadioButtonDaycare)).setEnabled(false);
-            	((RadioButton) findViewById(R.id.RadioButtonKindergarten)).setEnabled(false);
-                ((RadioButton) findViewById(R.id.RadioButtonElementary)).setEnabled(false);
-                ((RadioButton) findViewById(R.id.RadioButtonMiddle)).setEnabled(false);
-                ((RadioButton) findViewById(R.id.RadioButtonHigh)).setEnabled(false);
-                ((RadioButton) findViewById(R.id.RadioButtonCollege)).setEnabled(false);
-                ((TextView) findViewById(R.id.TextViewStudentLevel)).setEnabled(false);
+            	( findViewById(R.id.RadioButtonDaycare)).setEnabled(false);
+            	( findViewById(R.id.RadioButtonKindergarten)).setEnabled(false);
+                ( findViewById(R.id.RadioButtonElementary)).setEnabled(false);
+                ( findViewById(R.id.RadioButtonMiddle)).setEnabled(false);
+                ( findViewById(R.id.RadioButtonHigh)).setEnabled(false);
+                ( findViewById(R.id.RadioButtonCollege)).setEnabled(false);
+                ( findViewById(R.id.TextViewStudentLevel)).setEnabled(false);
             }
           });
         yesButton.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v) {
-            	((RadioButton) findViewById(R.id.RadioButtonDaycare)).setEnabled(true);
-            	((RadioButton) findViewById(R.id.RadioButtonKindergarten)).setEnabled(true);
-                ((RadioButton) findViewById(R.id.RadioButtonElementary)).setEnabled(true);
-                ((RadioButton) findViewById(R.id.RadioButtonMiddle)).setEnabled(true);
-                ((RadioButton) findViewById(R.id.RadioButtonHigh)).setEnabled(true);
-                ((RadioButton) findViewById(R.id.RadioButtonCollege)).setEnabled(true);
-                ((TextView) findViewById(R.id.TextViewStudentLevel)).setEnabled(true);
+            	( findViewById(R.id.RadioButtonDaycare)).setEnabled(true);
+            	( findViewById(R.id.RadioButtonKindergarten)).setEnabled(true);
+                ( findViewById(R.id.RadioButtonElementary)).setEnabled(true);
+                ( findViewById(R.id.RadioButtonMiddle)).setEnabled(true);
+                ( findViewById(R.id.RadioButtonHigh)).setEnabled(true);
+                ( findViewById(R.id.RadioButtonCollege)).setEnabled(true);
+                ( findViewById(R.id.TextViewStudentLevel)).setEnabled(true);
             }
           });
     }
 
     public void addListenerOnAge0To15RadioButton(){
-    	RadioButton zeroButton = (RadioButton) findViewById(R.id.RadioButtonAge);
-        RadioButton fiveButton = (RadioButton) findViewById(R.id.RadioButtonAge1);
-        RadioButton sixteenButton = (RadioButton) findViewById(R.id.RadioButtonAge2);
-        RadioButton twenty2Button = (RadioButton) findViewById(R.id.RadioButtonAge3);
-        RadioButton fiftyButton = (RadioButton) findViewById(R.id.RadioButtonAge4);
-        RadioButton sixty5Button = (RadioButton) findViewById(R.id.RadioButtonAge5);
+    	RadioButton zeroButton =  findViewById(R.id.RadioButtonAge);
+        RadioButton fiveButton =  findViewById(R.id.RadioButtonAge1);
+        RadioButton sixteenButton =  findViewById(R.id.RadioButtonAge2);
+        RadioButton twenty2Button =  findViewById(R.id.RadioButtonAge3);
+        RadioButton fiftyButton =  findViewById(R.id.RadioButtonAge4);
+        RadioButton sixty5Button =  findViewById(R.id.RadioButtonAge5);
         zeroButton.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v) {
             	((TextView) findViewById(R.id.TextViewES)).setEnabled(false);
