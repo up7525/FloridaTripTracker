@@ -507,15 +507,7 @@
 		        android:layout_height="wrap_content"
 		        android:paddingTop="10sp" >
 
-		        <Button
-		            android:id="@+id/ButtonDiscard"
-		            android:layout_width="fill_parent"
-		            android:layout_height="wrap_content"
-		            android:layout_weight="1"
-		            android:drawableLeft="@android:drawable/ic_menu_close_clear_cancel"
-		            android:text="Discard"
-		            android:textSize="18sp"
-		            android:textStyle="bold" />
+		       
 
 		        <Button
 		            android:id="@+id/ButtonSubmit"
